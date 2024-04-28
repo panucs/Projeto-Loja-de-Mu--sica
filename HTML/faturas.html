@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faturas - Loja de Música</title>
+    <link rel="stylesheet" href="CSS/menu_principal_style.css">
+    <link rel="stylesheet" href="CSS/faturas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html" class="link-principal">Loja de Música</a></h1>
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>
+        <img src="Imagens/teste.png" class="logo-menu" onclick="openNav()">
+    </header>
+
+    <h2 class="titulo">GESTÃO DE FATURAS</h2>
+
+    <div id="search-bar">
+        <form action="pesquisar_registo.html" method="get">
+            <div id="caixa-nome">
+                <label for="nomecliente">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div id="caixa-data">
+                <label for="data">Data Emissão:</label>
+                <input type="date" id="data_emissao" name="data">
+            </div>
+        </form>
+        <button onclick="addProduct()">Pesquisar</button>
+    </div>
+
+    <main class="registration-form">
+        <table id="stock-table">
+            <thead>
+                <tr>
+                    <th>Fatura</th>
+                    <th>Nome da Pessoa</th>
+                    <th>Data de emissão</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fatura 1</td>
+                    <td>João Silva</td>
+                    <td>10/01/2024</td>
+                    <td class="action-icons">
+                        <i class="fas fa-print" onclick="printInvoice(1)"></i>
+                        <i class="fas fa-info-circle" onclick="showInfo(1)"></i>
+                        <i class="fas fa-file-pdf" onclick="downloadPDF(1)"></i>
+                        <i class="fas fa-edit" onclick="editInvoice(1)"></i>
+                        <i class="fas fa-trash-alt" onclick="deleteInvoice(1)"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fatura 2</td>
+                    <td>Manuel Soares</td>
+                    <td>09/01/2024</td>
+                    <td class="action-icons">
+                        <i class="fas fa-print" onclick="printInvoice(1)"></i>
+                        <i class="fas fa-info-circle" onclick="showInfo(1)"></i>
+                        <i class="fas fa-file-pdf" onclick="downloadPDF(1)"></i>
+                        <i class="fas fa-edit" onclick="editInvoice(1)"></i>
+                        <i class="fas fa-trash-alt" onclick="deleteInvoice(1)"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fatura 3</td>
+                    <td>Bruno Marques</td>
+                    <td>08/01/2024</td>
+                    <td class="action-icons">
+                        <i class="fas fa-print" onclick="printInvoice(1)"></i>
+                        <i class="fas fa-info-circle" onclick="showInfo(1)"></i>
+                        <i class="fas fa-file-pdf" onclick="downloadPDF(1)"></i>
+                        <i class="fas fa-edit" onclick="editInvoice(1)"></i>
+                        <i class="fas fa-trash-alt" onclick="deleteInvoice(1)"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fatura 4</td>
+                    <td>André Marques</td>
+                    <td>08/01/2024</td>
+                    <td class="action-icons">
+                        <i class="fas fa-print" onclick="printInvoice(1)"></i>
+                        <i class="fas fa-info-circle" onclick="showInfo(1)"></i>
+                        <i class="fas fa-file-pdf" onclick="downloadPDF(1)"></i>
+                        <i class="fas fa-edit" onclick="editInvoice(1)"></i>
+                        <i class="fas fa-trash-alt" onclick="deleteInvoice(1)"></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fatura 5</td>
+                    <td>Bruno Sousa</td>
+                    <td>08/01/2024</td>
+                    <td class="action-icons">
+                        <i class="fas fa-print" onclick="printInvoice(1)"></i>
+                        <i class="fas fa-info-circle" onclick="showInfo(1)"></i>
+                        <i class="fas fa-file-pdf" onclick="downloadPDF(1)"></i>
+                        <i class="fas fa-edit" onclick="editInvoice(1)"></i>
+                        <i class="fas fa-trash-alt" onclick="deleteInvoice(1)"></i>
+                    </td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </main>
+
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="menu_clientes.html">Clientes</a>
+        <a href="faturas.html">Faturas</a>
+        <a href="menu_stock.html">Stock</a>
+        <a href="menu_vendas.html">Vendas</a>
+        <a href="cursos.html">Cursos</a>
+    </div>
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+</body>
+
+</html>

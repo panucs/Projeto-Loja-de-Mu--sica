@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Loja de Música</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel='stylesheet' href='css/cursos_style.css'>
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>
+        <img src="Imagens/teste.png" class="logo-menu" onclick="openNav()">
+        <h1><a href="index.html" class="link-principal">Loja de Música</a></h1>
+    </header>
+
+    <h2 class="titulo">Cursos</h2>
+
+    <main class="registration-form">
+        <div id="table-container">
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>Curso</th>
+                        <th>Grau de Dificuldade</th>
+                        <th>Preço</th>
+                        <th>Selecionar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Producer 1</td>
+                        <td>Iniciante</td>
+                        <td>1490€</td>
+                        <td><a href="Cursos/Producer1.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+
+                    </tr>
+                    <tr>
+                        <td>Producer 2</td>
+                        <td>Intermédio</td>
+                        <td>1490€</td>
+                        <td><a href="Cursos/Producer2.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Producer 3</td>
+                        <td>Avançado</td>
+                        <td>1490€</td>
+                        <td><a href="Cursos/Producer3.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>DJ 1</td>
+                        <td>Iniciante</td>
+                        <td>460€</td>
+                        <td><a href="Cursos/DJ1.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>DJ 2</td>
+                        <td>Intermédio</td>
+                        <td>460€</td>
+                        <td><a href="Cursos/DJ2.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>DJ 3</td>
+                        <td>Avançado</td>
+                        <td>600€</td>
+                        <td><a href="Cursos/DJ3.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Teoria Musical Básico</td>
+                        <td>Iniciante</td>
+                        <td>1490€</td>
+                        <td><a href="Cursos/TeoriaMusical1.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Teoria Musical Avançado</td>
+                        <td>Avançado</td>
+                        <td>1490€</td>
+                        <td><a href="Cursos/TeoriaMusical2.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Formação de Piano/Teclado</td>
+                        <td>Avançado</td>
+                        <td>790€</td>
+                        <td><a href="Cursos/Piano.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Formação de Bateria</td>
+                        <td>Intermédio</td>
+                        <td>490€</td>
+                        <td><a href="Cursos/Bateria.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Formação de Guitarra</td>
+                        <td>Intermédio</td>
+                        <td>490€</td>
+                        <td><a href="Cursos/Guitarra.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Formação de Violino</td>
+                        <td>Avançado</td>
+                        <td>790€</td>
+                        <td><a href="Cursos/Violino.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Workshops</td>
+                        <td>Iniciante</td>
+                        <td>50€</td>
+                        <td><a href="Cursos/Workshops.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Formação Infantil</td>
+                        <td>Iniciante</td>
+                        <td>300€</td>
+                        <td><a href="Cursos/Infantil.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function goToMenu() {
+            window.location.href = "index.html";
+        }
+    </script>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="menu_clientes.html">Clientes</a>
+        <a href="faturas.html">Faturas</a>
+        <a href="menu_stock.html">Stock</a>
+        <a href="menu_vendas.html">Vendas</a>
+        <a href="cursos.html">Cursos</a>
+    </div>
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+</body>
+
+</html>

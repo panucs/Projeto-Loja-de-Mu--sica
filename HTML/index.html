@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Música</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/menu_principal_style.css">
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html" class="link-principal">Loja de Música</a></h1>
+        <img src="Imagens/teste.png" class="logo-menu" onclick="openNav()">
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>        
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="menu_clientes.html">Clientes</a>
+        <a href="faturas.html">Faturas</a>
+        <a href="menu_stock.html">Stock</a>
+        <a href="menu_vendas.html">Vendas</a>
+        <a href="cursos.html">Cursos</a>
+    </div>
+
+    <main>
+        <div id="image-slider">
+            <img src="Imagens/image1.jpg" alt="Imagem 1" class="active">
+            <img src="Imagens/image2.jpg" alt="Imagem 2">
+            <img src="Imagens/image3.jpg" alt="Imagem 3">
+        </div>
+    </main>
+
+    <div class="setas-image-slider">
+        <img class="arrow-left" src="Imagens/back-arrow.png" onclick="prevImage()">
+        <img class="arrow-right" src="Imagens/back-arrow.png" onclick="nextImage()">
+    </div>
+
+    <div class="bottom-bar">
+        Site produzido por: Afonso Marques, Rafael Azevedo e Guilherme Borges | ULP - Eng. Inf. 2ºano
+    </div>
+
+    <script>
+        // Script para o sistema de troca de imagens
+        var currentImage = 0;
+        var images = document.querySelectorAll('#image-slider img');
+
+        function changeImage(index) {
+            images[currentImage].classList.remove('active');
+            currentImage = index;
+            images[currentImage].classList.add('active');
+        }
+
+        function prevImage() {
+            var index = (currentImage - 1 + images.length) % images.length;
+            changeImage(index);
+        }
+
+        function nextImage() {
+            var index = (currentImage + 1) % images.length;
+            changeImage(index);
+        }
+
+        setInterval(nextImage, 5000); // Troca a imagem automaticamente a cada 3 segundos (ajuste conforme necessário)
+    
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+</body>
+</html>

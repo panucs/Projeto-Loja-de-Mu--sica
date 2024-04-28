@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar Encomenda - Loja de Música</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/realizar_encomenda_style.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="back-arrow"  onclick="goBack()">
+            <a href="menu_vendas.html"><img src="Imagens\seta-esquerda.png" id="teste" alt="Seta-Esquerda"></a>
+        </div>
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>
+        <h1><a href="index.html" class="link-principal">Loja de Música</a></h1>
+    </header>
+
+    <h2 class="titulo">REALIZAR ENCOMENDA</h2>
+
+    <div id="search-bar">
+        <input type="text" placeholder="Pesquisar produtos..." id="searchInput" oninput="filterTable()">
+        <button onclick="addProduct()">Pesquisar</button>
+    </div>
+
+    <main class="registration-form">
+        <div id="table-container">
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pioneer XDJ-RX3</td>
+                        <td>2000,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Strandberg Boden Standard NX 8</td>
+                        <td>1850,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Hohner Corona II GCF</td>
+                        <td>1221,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Harley Benton TE-62CC SFG</td>
+                        <td>138,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Pearl Roadshow Jr. Jet Black</td>
+                        <td>377,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Thomann Blacky Bb-Trumpet</td>
+                        <td>229,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>beyerdynamic DT-990 Pro</td>
+                        <td>139,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>beyerdynamic Headphone Extension Cable 3,5</td>
+                        <td>20,90€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Image-Line FL Studio Producer Edition</td>
+                        <td>179,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yamaha C 7 X PE Grand Piano</td>
+                        <td>46990,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>KRK Rokit RP8 G4</td>
+                        <td>255,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alpine MusicSafe Pro - Black Edition</td>
+                        <td>26,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Algoritmia e Estruturas de Dados</td>
+                        <td>20,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>O Livro do Ric</td>
+                        <td>14,31€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tiagovski - O Rei dos Céus</td>
+                        <td>15,00€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Experiências Loucas e Factos Bizarros</td>
+                        <td>15,90€</td>
+                        <td><input type="number" class="quantity-box" value="0" min="0" onchange="updateSummaryTotals()">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div id="summary-row">
+            <p id="total-quantidade">Total Quantidade: 0 </p>
+            <p id="total-preco">Total Preço: 0,00€</p>
+            <button id="confirmar-button"><a href="pagamento.html" class="botao-confirmar">Confirmar</a></button>
+        </div>
+    
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function goToMenu() {
+            window.location.href = "index.html";
+        }
+
+        function confirmarCompra() {
+            var produtosSelecionados = document.querySelectorAll('.select-box:checked');
+
+            if (produtosSelecionados.length > 0) {
+                window.location.href = 'pagamento.html';
+                alert('Avançando para o pagamento');
+            } else {
+                alert('Selecionar pelo menos um produto antes de confirmar.');
+            }
+        }
+    </script>
+</body>
+
+</html>

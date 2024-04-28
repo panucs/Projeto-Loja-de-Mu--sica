@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promoções - Loja de Música</title>
+    <link rel="stylesheet" href="CSS/promocoes_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="back-arrow"  onclick="goBack()">
+            <a href="modificar_cliente.html"><img src="Imagens\seta-esquerda.png" id="teste" alt="Seta-Esquerda"></a>
+        </div>
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>
+        <h1><a href="index.html" class="link-principal" onclick="goToMenu()">Loja de Música</a></h1>
+    </header>
+
+    <h2 class="titulo">NOTIFICAÇÃO PROMOÇÕES</h2>
+
+    <main class="registration-form">
+
+        <form action="#" method="post" onsubmit="submitForm(); return false;">
+            <div class="form-group">
+                <label for="email">Digite seu e-mail:</label>
+                <input type="email" id="email" name="email" required value="email@cliente.com">
+            </div>
+            </div class="form-group">
+                <label for="receberPromocoes">Deseja receber notificações de promoções?</label>
+                <input type="checkbox" id="receberPromocoes" name="receberPromocoes">
+            <div>
+
+            <button type="submit">Salvar Preferências</button>
+            
+            
+        </form>
+    </main>
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function submitForm() {
+            var email = document.getElementById('email').value;
+            var receberPromocoes = document.getElementById('receberPromocoes').checked;
+
+            alert('Preferências salvas com sucesso!');
+        }
+    </script>
+</body>
+
+</html>

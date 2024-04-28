@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo de Pagamento - Loja de Música</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/pagamento.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="back-arrow"  onclick="goBack()">
+            <a href="menu_stock.html"><img src="Imagens\seta-esquerda.png" id="teste" alt="Seta-Esquerda"></a>
+        </div>
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>
+        <h1><a href="index.html" class="link-principal" onclick="goToMenu()">Loja de Música</a></h1>
+    </header>
+
+    <h2 class="titulo">MÉTODO DE PAGAMENTO </h2>
+
+    <main>
+        <label class="icon-box" onclick="selectPayment('dinheiro')">
+            <i id ="imagem-dinehro" class="fas fa-money-bill icon"></i>
+            <p class="icon-label">Dinheiro</p>
+            <input type="radio" name="modoPagamento" value="dinheiro">
+        </label>
+
+        <label class="icon-box" onclick="selectPayment('multibanco')">
+            <i id ="imagem-cartaocredito" class="fas fa-credit-card icon"></i>
+            <p class="icon-label">Multibanco</p>
+            <input type="radio" name="modoPagamento" value="multibanco">
+        </label>
+
+        <form onsubmit="return processPayment()">
+            <button type="submit">Confirmar Pagamento</button>
+        </form>
+    </main>
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function goToMenu() {
+            window.location.href = "index.html";
+        }
+
+        function selectPayment(modo) {
+            var radio = document.querySelector('input[name="modoPagamento"][value="' + modo + '"]');
+            radio.checked = true;
+        }
+
+        function processPayment() {
+            var modoPagamento = document.querySelector('input[name="modoPagamento"]:checked');
+
+            if (modoPagamento) {
+                alert('Pagamento confirmado: ' + modoPagamento.value);
+                return true; 
+            } else {
+                alert('Selecione um modo de pagamento.');
+                return false; 
+            }
+        }
+        function processPayment() {
+            var modoPagamento = document.querySelector('input[name="modoPagamento"]:checked');
+
+            if (modoPagamento) {
+                window.location.href = 'fatura.html';
+
+                return false; 
+            } else {
+                alert('Selecione um modo de pagamento.');
+                return false; 
+            }
+        }
+    </script>
+</body>
+
+</html>

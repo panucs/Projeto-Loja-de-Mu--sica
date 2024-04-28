@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisar Registo - Loja de Música</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel='stylesheet' href='css/pesquisar_registo_style.css'>
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="back-arrow" onclick="goBack()">
+            <a href="menu_clientes.html"><img src="Imagens\seta-esquerda.png" id="teste" alt="Seta-Esquerda"></a>
+        </div>
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>
+
+        <h1>Loja de Música</a></h1>
+    </header>
+
+    <h2 class="titulo">PESQUISAR REGISTO</h2>
+
+    <div id="search-bar">
+        <form action="pesquisar_registo.html" method="get">
+        <div id="caixa-nome">  
+            <label for="nomecliente">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div id="caixa-telefone">
+            <label for="Telemovel">Telemovel:</label>
+            <input type="text" id="telefone" name="telefone">
+        </div>
+        </form>
+        <button onclick="addProduct()">Pesquisar</button>
+    </div>
+
+    <main class="registration-form">
+        <div id="table-container">
+            <table id="product-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data de Nascimento</th>
+                        <th>Telefone</th>
+                        <th>Selecionar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>01/12/1985</td>
+                        <td>+351 912345678</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>15/06/1992</td>
+                        <td>+351 965432109</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>01/12/1985</td>
+                        <td>+351 912345678</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>15/06/1992</td>
+                        <td>+351 965432109</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>01/12/1985</td>
+                        <td>+351 912345678</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>15/06/1992</td>
+                        <td>+351 965432109</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>01/12/1985</td>
+                        <td>+351 912345678</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>15/06/1992</td>
+                        <td>+351 965432109</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>01/12/1985</td>
+                        <td>+351 912345678</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>15/06/1992</td>
+                        <td>+351 965432109</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>01/12/1985</td>
+                        <td>+351 912345678</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>15/06/1992</td>
+                        <td>+351 965432109</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>01/12/1985</td>
+                        <td>+351 912345678</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>15/06/1992</td>
+                        <td>+351 965432109</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>João Silva</td>
+                        <td>01/12/1985</td>
+                        <td>+351 912345678</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+                    <tr>
+                        <td>Maria Oliveira</td>
+                        <td>15/06/1992</td>
+                        <td>+351 965432109</td>
+                        <td><a href="modificar_cliente.html"><button type="button">Selecionar</button></a></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function goToMenu() {
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+
+</html>

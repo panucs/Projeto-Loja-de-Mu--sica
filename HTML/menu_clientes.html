@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Loja de Música</title>
+    <link rel="stylesheet" href="CSS/menu_clientes_style.css">
+    <link rel="stylesheet" href="CSS/menu_principal_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" class="link-principal">Loja de Música</a></h1>
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>
+        <img src="Imagens/teste.png" class="logo-menu" onclick="openNav()">
+    </header>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="menu_clientes.html">Clientes</a>
+        <a href="faturas.html">Faturas</a>
+        <a href="menu_stock.html">Stock</a>
+        <a href="menu_vendas.html">Vendas</a>
+        <a href="cursos.html">Cursos</a>
+    </div>
+    <h2 class="titulo">GESTÃO DE CLIENTES</h2>
+    <main class="client-actions">
+            <a href="registo_cliente.html" class="icon-box">
+            <i class="fas fa-user icon"></i>
+            <p class="icon-label">Registar Cliente</p>
+        </a>
+
+        <a href="pesquisar_registo.html" class="icon-box">
+            <i class="fas fa-edit icon"></i>
+            <p class="icon-label">Pesquisar Registo</p>
+        </a>
+    </main>
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+
+</body>
+</html>

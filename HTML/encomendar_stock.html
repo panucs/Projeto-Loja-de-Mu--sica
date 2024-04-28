@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomendar Stock - Loja de Música</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="CSS/ecomendar_stock_style.css">
+</head>
+
+<body>
+    <header class="top-bar">
+        <div class="back-arrow"  onclick="goBack()">
+            <a href="menu_stock.html"><img src="Imagens\seta-esquerda.png" id="teste" alt="Seta-Esquerda"></a>
+        </div>
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>
+        <h1><a href="index.html" class="link-principal" onclick="goToMenu()">Loja de Música</a></h1>
+    </header>
+
+    <h2 class="titulo">ENCOMENDAR STOCK</h2>
+    <div id="search-bar">
+        <input type="text" placeholder="Pesquisar produtos..." id="searchInput" oninput="filterTable()">
+        <button  id="botao_adicionar" onclick="addProduct()">Pesquisar</button>
+    </div>
+
+    <table id="stock-table">
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Tempo de Entrega</th>
+            </tr>
+        </thead>
+        <tbody id="stock-table-body">
+            <tr>
+                <td>Pioneer XDJ-RX3</td>
+                <td><input type="number" class="quantity-input" value="0" min="0" id="quantityProduto1"></td>
+                <td>3 dias</td>
+            </tr>
+            <tr>
+                <td>Strandberg Boden Standard NX 8</td>
+                <td><input type="number" class="quantity-input" value="0" min="0" id="quantityProduto2"></td>
+                <td>3 dias</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button id="confirm-button" onclick="confirmOrder()">Confirmar Pedido</button>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Para ocultar a parte do menu à esquerda */
+}
+
+header, nav {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+
+header {
+    color: #333;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    height: 50px;
+}
+
+header h1 {
+    text-align: center;
+    margin-top: -1px;
+}
+
+nav {
+    color: #fff;
+    width: 70px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+    text-align: center; /* Centraliza os elementos no meio da página */
+}
+
+.icon-box {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.icon-label {
+    font-size: 16px;
+}
+
+/* Estilos para a seta de volta ao menu principal */
+.back-arrow {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Estilos para a barra inferior */
+.bottom-bar {
+    color: #333;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #ddd;
+    height: 2em; 
+    font-size: 0.85em;
+}
+
+/* Estilos para o sistema de troca de imagens */
+#image-slider {
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+#image-slider img {
+    width: 50%;
+    display: none;
+    position: relative;
+    left: 25%;
+}
+
+#image-slider img.active {
+    display: block;
+}
+
+/* Estilos para as setas de navegação */
+.arrow {
+    font-size: 30px;
+    color: #fff;
+    background-color: #555;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow-left{
+    top: -500px;
+    left: 15%;
+    width: 100px;
+    position: relative;
+    cursor: pointer;
+}
+
+.arrow-right{
+    left: 72%;
+    top: -500px;
+    width: 100px;
+    position: relative;
+    cursor: pointer;
+    transform: scaleX(-1);
+}
+
+.link-principal{
+    color: #000;
+    text-decoration: none;
+}
+
+  
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #555;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+  }
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+.logo-menu{
+    margin-left: -95%;
+    position: relative;
+    top: -60px;
+    width: 60px;
+    cursor: pointer;
+  }
+
+.top-bar {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.logo-musica{
+    width: 60px;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+}

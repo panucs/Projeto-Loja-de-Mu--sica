@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Stock - Loja de Música</title>
+    <link rel="stylesheet" href="CSS/adicionar_stock_style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="back-arrow"  onclick="goBack()">
+            <a href="menu_stock.html"><img src="Imagens\seta-esquerda.png" id="teste" alt="Seta-Esquerda"></a>
+        </div>
+        <a href="index.html" class="logo-musica">
+            <img src="Imagens/music.png" class="logo-musica">
+        </a>    
+        <h1><a href="index.html" class="link-principal" onclick="goToMenu()">Loja de Música</a></h1>
+    </header>
+
+    <h2 class="titulo">ADICIONAR STOCK</h2>
+
+    <main class="registration-form">
+
+    <div id="search-bar">
+        <input type="text" placeholder="Pesquisar produtos..." id="searchInput" oninput="filterTable()">
+        <button onclick="addProduct()">Pesquisar</button>
+    </div>
+
+    <div id="table-container">
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Falta de stock</th>
+                    <th>Quantidade atual</th>
+                    <th>Quantidade pretendida</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pioneer XDJ-RX3</td>                    
+                    <td class="out-of-stock">
+                        <input type="checkbox" class="select-box" >
+                    </td>
+                    <td>
+                        <div class="quantity-buttons">
+                            
+                            <input type="number" class="quantity-box" value="0" min="0"
+                                onchange="updateSummaryTotals()">
+                        </div>
+                        <td>
+                            <div class="quantity-buttons">
+                                
+                                <input type="number" class="quantity-box" value="0" min="0"
+                                    onchange="updateSummaryTotals()">
+                            </div>
+                        </td>
+                        <td>2000,00€</td>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>Strandberg Boden Standard NX 8</td>                    
+                    <td class="out-of-stock">
+                        <input type="checkbox" class="select-box" >
+                    </td>
+                    <td>
+                        <div class="quantity-buttons">
+                            
+                            <input type="number" class="quantity-box" value="0" min="0"
+                                onchange="updateSummaryTotals()">
+                        </div>
+                        <td>
+                            <div class="quantity-buttons">
+                                
+                                <input type="number" class="quantity-box" value="0" min="0"
+                                    onchange="updateSummaryTotals()">
+                            </div>
+                        </td>
+                        <td>1850,00€</td>
+                    </td>    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="summary-row">
+        <div>
+            <a id="tot-quant">Total Quantidade: 0</a>
+            <a id="tot-preco">Total Preço: 0,00€</a>
+        </div>
+    
+        <div id="confirmar-button" onclick="confirmarCompra()" class="botao">Confirmar</div>
+    </div>
+
+    </main>
+
+    <script>
+        function goBack() {
+            history.back();
+        }
+    </script>
+</body>
+
+</html>

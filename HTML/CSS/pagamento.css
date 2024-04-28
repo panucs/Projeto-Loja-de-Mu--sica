@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para a barra superior */
+.top-bar {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+/* Estilos para a barra superior */
+.top-bar,
+.bottom-bar {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para a seta de volta */
+.back-arrow {
+    font-size: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+}
+
+/* Estilos para o conteúdo principal */
+main {
+    text-align: center;
+}
+
+/* Estilos para as caixas de ícones */
+.icon-box {
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.icon {
+    font-size: 45px;
+    margin-bottom: 72px;
+}
+
+#imagem-dinehro{
+    position: relative;
+    top: 30%;
+}
+
+#imagem-cartaocredito{
+    position: relative;
+    top: 30%;
+}
+
+#imagem-dinehro{
+    position: relative;
+    top: 30%;
+}
+
+.icon-label {
+    font-size: 16px;
+    position: relative;
+}
+
+/* Estilos para o formulário de pagamento */
+form {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilos para a estilização do input do tipo radio, oculto */
+input[type="radio"] {
+    display: none;
+}
+
+/* Estilos para a estilização do input do tipo radio, visível quando marcado */
+input[type="radio"]:checked+.icon-box {
+    border-color: #00f; /* Adapte a cor conforme necessário */
+}
+
+.link-principal{
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    left: 350%;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.logo-musica{
+    width: 60px;
+    cursor: pointer;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+}
